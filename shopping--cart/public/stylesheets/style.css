@@ -1,0 +1,12 @@
+.container {
+    padding: 1.5em;
+}
+
+.price {
+    color: green;
+    float: left;
+}
+
+.half {
+    float: right;
+}
