@@ -1,102 +1,22 @@
+{{# each products}}
 <div class="card-deck">
+  {{# each this }}
   <div class="card">
-    <img
-      src="https://d2skuhm0vrry40.cloudfront.net/2019/articles/2019-02-16-14-03/fifa_19_old_cover.jpg/EG11/resize/690x-1/quality/75/format/jpg"
-      class="card-img-top" alt="...">
+    <img src="{{ this.imagePath }}" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">FIFA 19</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.
-        This content is a little bit longer.</p>
+      <h5 class="card-title">{{ this.title }}</h5>
+      <p class="card-text">{{ this.description }}</p>
     </div>
     <div class="card-footer">
       <div>
-        <h2 class="price">$150.000</h2>
+        <h2 class="price">${{ this.price }}</h2>
       </div>
       <div class="half">
         <a href="#" class="btn btn-primary pull-right">BUY NOW!</a>
       </div>
     </div>
   </div>
-  <div class="card">
-    <img src="https://static.raru.co.za/cover/2018/06/19/6718422-l.jpg?v=1533294578" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">CALL OF DUTY BLACK OPS IV</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <div>
-        <h2 class="price">$150.000</h2>
-      </div>
-      <div class="half">
-        <a href="#" class="btn btn-primary pull-right">BUY NOW!</a>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://www.compraecuador.com.ec/web/image/product.product/2200/image" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">UNCHARTED 4</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-        This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <div>
-        <h2 class="price">$150.000</h2>
-      </div>
-      <div class="half">
-        <a href="#" class="btn btn-primary pull-right">BUY NOW!</a>
-      </div>
-    </div>
-  </div>
-</div><br>
-<div class="card-deck">
-  <div class="card">
-    <img
-      src="https://d2skuhm0vrry40.cloudfront.net/2019/articles/2019-02-16-14-03/fifa_19_old_cover.jpg/EG11/resize/690x-1/quality/75/format/jpg"
-      class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">FIFA 19</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.
-        This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <div>
-        <h2 class="price">$150.000</h2>
-      </div>
-      <div class="half">
-        <a href="#" class="btn btn-primary pull-right">BUY NOW!</a>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://static.raru.co.za/cover/2018/06/19/6718422-l.jpg?v=1533294578" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">CALL OF DUTY BLACK OPS IV</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <div>
-        <h2 class="price">$150.000</h2>
-      </div>
-      <div class="half">
-        <a href="#" class="btn btn-primary pull-right">BUY NOW!</a>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://www.compraecuador.com.ec/web/image/product.product/2200/image" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">UNCHARTED 4</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-        This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <div>
-        <h2 class="price">$150.000</h2>
-      </div>
-      <div class="half">
-        <a href="#" class="btn btn-primary pull-right">BUY NOW!</a>
-      </div>
-    </div>
-  </div>
+  {{/each}}
 </div>
+</br>
+{{/each}}
