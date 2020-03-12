@@ -28,7 +28,8 @@ yargs.command({
       type: 'string'
     }
   },
-  handler: (argv) => {
+  //If function is a method, use ES6 method definition syntax
+  handler(argv) {
     notes.addNote(argv.title, argv.body)
   }
 })
@@ -44,7 +45,8 @@ yargs.command({
       type: 'string'
     }
   },
-  handler: (argv) => {
+  //If function is a method, use ES6 method definition syntax
+  handler(argv) {
     notes.removeNote(argv.title)
   }
 })
@@ -53,8 +55,9 @@ yargs.command({
 yargs.command({
   command: 'list',
   describe: 'List your notes',
-  handler: () => {
-    console.log('Listing out all notes!');
+  //If function is a method, use ES6 method definition syntax
+  handler() {
+    notes.listNotes()
   }
 })
 
@@ -62,8 +65,15 @@ yargs.command({
 yargs.command({
   command: 'read',
   describe: 'Read a note',
-  handler: () => {
-    console.log('Reading note!');
+  builder: {
+    title: {
+      describe: 'Note title',
+      demandOption: true,
+      type: 'string'
+    }
+  },
+  handler(argv) {
+    notes.readNote(argv.title)
   }
 })
 
